@@ -1,0 +1,590 @@
+@CHARSET "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "Verdana";
+}
+
+a {
+    text-decoration: none;
+    color: #1A78EC;
+    blr: expression(this.onFocus =this.blur () );
+}
+
+a:focus {
+	-moz-outline-style: none;
+}
+
+.link {
+	cursor: pointer;
+	color: #1A78EC;
+}
+html body {
+	height: 100%;
+	_text-align: center;
+	_margin-right: auto;
+	_margin-left: auto;
+}
+
+.enableBtn {
+	background: #1A78EC;
+	border: 0px;
+	color: white;
+	font: 20px "黑体";
+	cursor: pointer;
+	text-align: center;
+}
+
+.disableBtn {
+	background: #999999;
+	border: 0px;
+	color: white;
+	font: 20px "黑体";
+	cursor: default;
+	text-align: center;
+}
+
+
+.setupBtn {
+	padding: 15px 50px;
+	line-height: 80px;
+}
+
+.top {
+	height: 36px;
+	width: 100%;
+	min-width: 1000px;
+	background: url("../img/banner_bg.jpg") repeat-x;
+}
+.divfoot {
+	height: 36px;
+	width: 100%;
+	min-width: 1000px;
+	background: url("../img/banner_bg.jpg") repeat-x;
+	text-align: center;
+	line-height:36px
+}
+.divkefu {
+	font-size: 14px;
+    height: 50px;
+    background: #D2E6F9;
+    position: relative;
+    padding: 3px 10px;
+}
+.kefutxt{
+    margin-left: 10px;
+    height: 30px;
+    width: 80px;
+    color: #1C2229;   
+	font-size: 14px;
+	position: absolute;
+    top: 15px;
+}
+	
+.topcontent {
+	height: 100%;
+	width: 100%;
+	_width: 990px;
+}
+
+.logo {
+	float: left;
+	margin-left: 10px;
+}
+
+.version {
+	color: #1867C6;
+}
+
+.status {
+	float: right;
+	margin-right: 10px;
+	color: #FFFFFF;
+}
+
+.status img {
+	margin-left: 10px;
+}
+
+.content {
+	position: absolute;
+	top: 36px;
+	bottom: 0px;
+	right: 5px;
+	left: 5px;
+	min-height: 575px;
+	min-width: 990px;
+	_position: relative;
+	_top: 0px;
+	_height: 610px;
+	_width: 990px;
+	_text-align: left;
+}
+
+.cams {
+	position: absolute;
+	width: 325px;
+	top: 10px;
+	bottom: 10px;
+	_height: 565px;
+}
+
+.cam {
+	position: absolute;
+	width: 325px;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 65px;
+	_height: 500px;
+}
+
+.op {
+	position: absolute;
+	right: 5px;
+	left: 5px;
+	height: 65px;
+	bottom: 0px;
+}
+
+.options {
+	height: 30px;
+	line-height: 30px;
+}
+
+.options input {
+	position: relative;
+	top: 2px;
+}
+
+.operate {
+	height: 35px;
+}
+
+#stopBtn {
+	position: absolute;
+	bottom: 0px;
+	left: 60px;
+	height: 20px;
+	width: 40px;
+	line-height: 20px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: "宋体";
+}
+
+#nextBtn {
+	position: absolute;
+	bottom: 0px;
+	left: 110px;
+	height: 35px;
+	width: 115px;
+	line-height: 35px;
+}
+
+.chat {
+	position: absolute;
+	top: 10px;
+	left: 335px;
+	right: 0px;
+	bottom: 10px;
+	background-color: #E0ECFC;
+	border: 1px #C1DBFC double;
+	_height: 565px;
+	_width: 643px;
+}
+
+.title {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 20px;
+}
+
+.chatlog {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	right: 10px;
+	bottom: 120px;
+	_width: 613px;
+	_height: 415px;
+}
+
+#log {
+	position: absolute;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.youmsg .msgsource {
+	COLOR: blue; FONT-WEIGHT: bold
+}
+.strangermsg .msgsource {
+	COLOR: red; FONT-WEIGHT: bold
+}
+.statuslog {
+	COLOR: #555; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.logitem {
+	padding:5px;
+}
+
+.time {
+	font-size: 10px;
+}
+
+.system {
+	color: #888888;
+	margin-bottom: 2px;
+}
+
+.systemlogtext {
+	padding-left: 13px;
+	line-height: 17px;
+	color: #888888;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.systemstartlogtext {
+	padding-left: 13px;
+	line-height: 17px;
+	color: #FF0000;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.systemstoplogtext {
+	padding-left: 13px;
+	line-height: 17px;
+	color: #888888;
+	word-wrap: break-word;
+	word-break: break-all;
+	margin-bottom: 8px;
+}
+
+.self {
+	color: #00B050;
+	margin-bottom: 2px;
+}
+
+.partner {
+	color: #0070C0;
+	margin-bottom: 2px;
+}
+
+.logborder {
+	padding: 4px 5px;
+}
+
+.logtext {
+	padding-left: 13px;
+	line-height: 17px;
+	color: #000000;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.toolBar {
+	height: 30px;
+	line-height: 30px;
+	left: 20px;
+	right: 10px;
+}
+
+.toolBar input {
+	position: relative;
+	top: 2px
+}
+
+#clear {
+	cursor: pointer;
+	color: #1A78EC;
+}
+
+.area {
+	position: absolute;
+	bottom: 30px;
+	left: 10px;
+	right: 10px;
+	height: 60px;
+	_width: 625px;
+}
+
+.chatarea {
+	position: absolute;
+	left: 0px;
+	right: 100px;
+	height: 100%;
+	border: 1px #C1DBFC double;
+	_width: 520px;
+	z-index:0;
+}
+
+#chatarea {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	_height: 60px;
+	resize: none;
+	border: 0px;
+	overflow: hidden;
+}
+
+#send {
+	height: 100%; 
+	*height: 60px;
+	width: 90px;
+	float: right;
+	line-height: 60px;
+}
+
+.btmBar {
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+	right: 10px;
+	height: 25px;
+	line-height: 25px;
+}
+
+#mask {
+	z-index: 98;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	-moz-opacity: 0.5;
+	opacity: .50;
+	filter: alpha(opacity = 50);
+	background-color: #000000;
+	z-index: 98;
+}
+
+#winBorder {
+	display: none;
+	z-index: 99;
+	position: absolute;
+	padding: 7px;
+	top: 200px;
+	left: 400px;
+	width: 660px;
+	height: 420px;
+	-moz-opacity: 0.75;
+	opacity: .75;
+	filter: alpha(opacity = 75);
+	background-color: #000000;
+}
+
+#win {
+	display: none;
+	z-index: 100;
+	position: absolute;
+	top: 207px;
+	left: 407px;
+	width: 620px;
+	height: 380px;
+	padding: 20px;
+	background: white;
+	text-align: center;
+}
+
+#winClose {
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	float: right;
+	padding: 10px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.ruleTitle {
+	color: #FF5400;
+	font-weight: bold;
+	text-align: left;
+	line-height: 30px;
+}
+
+#ruleLink {
+	cursor: pointer;
+	color: #1C7AEE;
+}
+
+.rule {
+	text-align: left;
+	line-height: 20px;
+}
+
+.rule ol {
+	position: relative;
+	left: 20px;
+	width: 600px;
+}
+
+#startBtn {
+	padding: 15px 50px;
+	line-height: 80px;
+}
+
+#reconnBtn {
+	padding: 15px 30px;
+}
+
+.connctInfo {
+	display: none;
+	font: 20px "黑体";
+	color: #FF5603;
+	line-height: 80px;
+}
+
+.connctInfo img {
+	position: relative; *
+	position: static;
+	top: 10px;
+}
+
+#map {
+	position: absolute;
+	background-color: #202020;
+	z-index: 50;
+	width: 500px;
+	height: 400px;
+	display: none;
+	padding: 7px;
+}
+
+.mapBody {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+.mapTitle {
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	right: 7px;
+	_right: -7px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0px 5px 0px 5px;
+	overflow: hidden;
+	background-color: #F1EEE8;
+}
+
+#mapClose {
+	float: right;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 0px 5px 0px 5px;
+}
+
+#informDlg{
+	display: none;
+	position: absolute;
+	top: 300px;
+	left: 500px;
+	z-index: 100px;
+	width: 300px;
+	height: 140px;
+	background-color: white;
+	padding: 30px;
+	padding-top: 20px;
+	_padding-bottom: 10px;
+	border: 5px black solid ;
+}
+
+.informTitle {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	_right: -60px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0px 5px 0px 5px;
+	overflow: hidden;
+}
+
+.informContent{
+	line-height: 18px;
+	text-align: left;
+}
+
+#informClose {
+	float: right;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 0px 5px 0px 5px;
+}
+
+#informUser {
+	padding: 10px 20px;
+	line-height: 55px;
+	font-size: 15px;
+}
+
+#cancelInform {
+	padding: 10px 20px;
+	line-height: 55px;
+	font-size: 15px;
+}
+
+
+/* menu styles */
+#jsddm
+{	margin: 0;
+	padding: 0;}
+
+	#jsddm li
+	{	float: left;
+		list-style: none;
+		font: 12px Tahoma, Arial}
+
+	#jsddm li a
+	{	display: block;
+		padding: 5px 12px;
+		text-decoration: none;
+		border-right: 1px solid 00F;
+		color: #00F;
+		white-space: nowrap;
+	}
+
+	#jsddm li a:hover
+	{	background: orange;}
+		
+		#jsddm li ul
+		{	margin: 0;
+			padding: 0;
+			position: absolute;
+			visibility: hidden;
+			border: 1px solid #000;
+			z-index:99999999999999999;
+			}
+		
+			#jsddm li ul li
+			{	float: none;
+				display: inline}
+			
+			#jsddm li ul li a
+			{	width: auto;
+				background: #FFFFFF;
+				color: #24313C}
+			
+			#jsddm li ul li a:hover
+			{	background: orange;
+			}
+.face  {
+	margin:1px;
+	padding:14px 15px;
+	cursor:pointer;
+	float:left;
+	height:0;
+	width:0;
+}

@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-07-02 15:09:53
+ * @version $Id$
+ */
+ *{margin:0; padding:0; border:0;font-family: " "微软雅黑",Tahoma,Arial";color:#666;}ul{list-style: none}a{color:#666;text-decoration: none}a:hover{color:#f33;text-decoration: none}
+ h1,h2,h3,h4{font-size: 1em;font-style: normal;font-weight: normal;}
+ .clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}input[type=button]{cursor: pointer;}
+ .clear{zoom:1;}
+ .fl,.floatLeft{float:left;}
+ .fr,.floatRight{float:right;}
+
+ .content{width:1200px;margin:10px auto;}
+ .content .left{width:210px;float: left;}
+ .content .right{width:970px;float: left;margin-left: 10px;}
+ .content .sidebar{ border: 1px solid #d8d8d8;margin-bottom: 10px; overflow: hidden;padding: 4px 0;}
+ .content .sidebar h2{height:32px;line-height:32px;border-bottom:1px solid #e7e7e7;color: #333;font-size: 14px;font-weight: bold;padding-left: 5px}
+ .content .sidebar h2 b{padding-left:10px;font-size: 16px;}
+ .content .sidebar dl.category{overflow: hidden;width: 180px;line-height: 20px;margin: 15px auto;}
+ .content .sidebar dl.category dt ,dd{line-height: 25px;cursor: pointer;}
+ .content .sidebar dl.category dt{ color: #666;font-size: 13px;font-weight: 600;}
+ .content .sidebar dl.category dd{padding-left: 20px;font-size: 13px;}
+ .content .sidebar dl.category dt i.tree{background: url("../images/ncus_public.png") no-repeat -20px 0; display: inline-block;height: 10px;margin: 0 6px 0 4px;
+ width: 10px;} 
+ .content .sidebar dl.category dt.on i.tree{background: url("../images/ncus_public.png") no-repeat  -20px -20px;}
+ .content .sidebar dl.category dd ul.sub{display: block}
+ .content .sidebar .hotbox{padding:20px 0;}
+ .content .sidebar .hotbox li{height:255px;padding:0 19px;}
+ .content .sidebar .hotbox .hotlist .hotpic{width:170px;height:170px;}
+ .content .sidebar .hotbox .hotlist .hotpic img{width:170px;height:170px;}
+ .content .sidebar .hotbox .hotinfo{width:170px;font-size: 13px;line-height: 20px}
+ .content .sidebar .hotbox .hotinfo .hot-price{line-height: 25px;}
+ .content .sidebar .hotbox .hotinfo .hot-price a i{font-size: 12px;font-style: normal;}
+ .content .sidebar .hotbox .hotinfo .hot-price a span{color:#f33;font-size: 16px;}
+ .content .sidebar .hotbox .hotlist .hotinfo .hot-name a:hover{color:#36c;}
+
+ .content .right .rec{padding:0 20px;}
+ .content .right .rec .rec_goods{width:930px;padding:30px 0;}
+ .content .right .rec .rec_goods ul{padding-left: -20px;}
+ .content .right .rec .rec_goods ul li{width:210px;height:100px;float:left;padding-left:27px;font-size: 12px;}
+ .content .right .rec .rec_goods ul li dl{position:relative;width:214px;height:100px;}
+ .content .right .rec .rec_goods ul li dl .goodpic{position:absolute;left:0;top:0;width:100px;height:100px;}
+ .content .right .rec .rec_goods ul li dl .goodpic img{width:100px;height:100px;}
+ .content .right .rec .rec_goods ul li dl .goodname{width:100px;height:65px;position:absolute;right:0;top:8px;line-height:16px;overflow:hidden;}
+ .content .right .rec .rec_goods ul li dl .goodprice{width:20px;height:20px;line-height:20px;position:absolute;bottom:0;right:70px;padding-left:10px;background:url(http://mall.tangli.dld.com/templates/default/css/../images/rmb.gif) no-repeat left center;}
+ .content .right .rec .rec_goods ul li dl .goodprice em{    color: #c00;font-family: Arial,Helvetica,sans-serif;font-style: normal;}
+ .content .right .filter{width:928px;border: 1px solid #d8d8d8;padding:0 20px;margin-bottom: 10px;}
+ .content .right .filter dl{width:928px;border-bottom: 1px solid #eee;clear: both;margin: 0 auto;overflow: hidden;padding: 8px 0;font-size: 14px;}
+ .content .right .filter dl dt{width: 67px;float: left;line-height: 28px;overflow: hidden;padding-right: 8px;font-size: 14px;text-align: right;white-space: nowrap;}
+ .content .right .filter dl dd{float: left;width:850px;font-size: 13px;}
+ .content .right .filter dl dd ul li a{color:#0063dc} .content .right .filter dl dd ul li a:hover{color:#f33}
+ .content .right .filter dl dd ul{}
+ .content .right .filter dl dd ul li{float: left;line-height: 28px; padding: 0 20px 0 10px;}
+ .content .right .sorbar{width:968px;border: 1px solid #d8d8d8;}
+ .content .right .goods-list{width:970px;}
+ .content .right .goods-list ul{margin-right: -10px;}
+ .content .right .goods-list ul li{width:235px;height:320px;margin-right: 10px;float: left;margin-bottom: 20px;position: relative;z-index: 1;background: #fff}
+ .content .right .goods-list ul li .g{width:213px;height:300;padding:10px;position: absolute;z-index: 1;background: #fff;border:1px solid #fff;}
+ .content .right .goods-list ul li:hover{z-index:2;}
+ .content .right .goods-list ul li:hover .g{box-shadow: 0 0 8px rgba(0,0,0,0.2);height:410px; border:1px solid #d8d8d8; }/*ie6,ie7,ie8*/
+ .content .right .goods-list ul li .g-pic{width:215px;height: 215px;margin-bottom: 10px;}
+ .content .right .goods-list ul li .g-pic img{width:215px;height: 215px;}
+ .content .right .goods-list ul li .g-name{width:215px;padding:0 5px;text-align：left;height:40px;line-height:20px;font-size: 12px;overflow: hidden;margin-bottom: 15px;}
+ .content .right .goods-list ul li .g-name a{color:#36c;} .content .right .goods-list ul li .g-name a:hover{color:#f33;}
+ .content .right .goods-list ul li .g-price{_height:20px;font-size: 12px;line-height: 20px;margin-bottom: 10px;}
+ .content .right .goods-list ul li .g-price .price em{color: #f30;font-style:normal;font-size: 16px;font-weight: 600;margin-left: 2px}
+ .content .right .goods-list ul li .g-price .del-price{color: #aaa;text-decoration:line-through;width:35px;margin-left: 10px;}
+ .content .right .goods-list ul li .g-price .bar{margin-left:50px;}
+ .content .right .goods-list ul li .seller-info{width:205px;font-size:12px;padding:4px;overflow:hidden;background-color: #f4fafe;border: 1px dotted #a7caed;position: absolute;z-index: 2;display: none;}
+ .content .right .goods-list ul li .seller-info p{height: 20px;line-height: 20px;width: 155px;}
+ .content .right .goods-list ul li .seller-info p .heart{width:16px;height:16px;background: url(../images/heart-seller.gif) no-repeat;display: inline-block;vertical-align: middle;}
+ .content .right .research{width:968px;height:40px;padding:20px 0;background: #eeeeee;border:1px solid #ccc;margin:50px 0;}
+ .content .right .research p{width:570px;margin: 0 auto;height:40px;line-height: 40px;}
+ .content .right .research p span{height:40px;line-height: 40px; float: left}
+ .content .right .research .retext{width:370px;height: 38px;line-height:38px;font-size:14px;border:1px solid #ccc;margin-left:25px;padding-left:10px;}
+ .content .right .research .reseabtn{width:80px;height: 40px;background: #ff3334;color:#fff;margin-left: 10px;font-size: 14px;cursor: pointer;}
+ .content .right .pagebox{width:970px;height:25px;margin:70px 0;}
+ .content .right .pagination{float:right;font-size: 12px;}
+ .content .right .pagination ul{}
+ .content .right .pagination ul li{display: inline;float: left}
+ .content .right .pagination ul li a:hover span{color:#ff7701;}
+ .content .right .pagination ul li span{ border: 1px solid #ccc;display: inline-block;font-size: 12px;height:23px;line-height: 23px;margin: 0 2px;padding: 0 10px;}
+ .content .right .pagination ul li span.curpage{ color: #ff7701;}
+ .content .right .pagination ul li span.hidepage{border:none;height:25px; line-height: 25px; position: relative; overflow: hidden;}
+ .content .right .pagination ul li .pagebtn{width: 50px;border:1px solid #ccc;height: 23px; border: 1px solid #ccc; display: inline-block; line-height: 23px; background: #eee; color: #666; position: relative;text-align: center;overflow: hidden;}
+ .content .right .pagination ul li .pagenum{width: 30px;height:23px;vertical-align: top;line-height:23px;border: 1px solid #ccc; text-align: center;}

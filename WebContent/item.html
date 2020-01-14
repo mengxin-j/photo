@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>商城首页</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/item.css" rel="stylesheet" />
+		<script src="js/jquery.js" type="text/javascript"></script>
+	</head>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//top顶层鼠标经过时候的导航的显示和隐藏
+			$('.user-center>.menu').mouseover(function() {
+				$(this).addClass('menuhover');
+				$(this).siblings().css('display','block');
+			});
+
+			$('.user-center>.menu').mouseout(function() {
+				$(this).removeClass('menuhover');
+				$(this).siblings().css('display', 'none');
+			});
+
+			//鼠标经过图片变大
+			$('#pics img').hover(function(){
+				$(this).css('transform','scale(1.5)');
+			},function(){
+				$(this).css('transform',"none");
+			});
+			//鼠标经过商品描述字变色
+			$('.miaosu span').hover(function(){
+				$(this).css('color','blue');
+				$(this).css('text-decoration','underline');
+			},function(){
+				$(this).css('color','black');
+				$(this).css('text-decoration','none');
+			});
+			//鼠标经过头部，显示下底边线
+			$('.tous').hover(function(){
+				$(this).children('#tou_ct').css('color','red');
+				$(this).children('#tou_ctd').css('display','block');
+			},function(){
+				$(this).children('#tou_ctd').css('display','none');
+				$(this).children('#tou_ct').css('color','#666');
+			});
+			//鼠标经过更多时 展示下拉菜单
+			$('.tousm').hover(function(){
+				$(this).children('#tou_ct').css('color','red');
+				$(this).children('.mores').css('display','block');
+			},function(){
+				$(this).children('#tou_ct').css('color','#666');
+				$(this).children('.mores').css('display','none');
+			});
+			//小导航点击变红
+			$('li').click(function(){
+				$(this).css('color','red');
+				$(this).siblings().css('color','#666');
+			});
+		});
+	</script>
+	<body>
+		<!------- 	<div class="top">---顶部----->
+		<div class="top">
+			<div class="topnav clear">
+				<div class="user-entry">
+					您好，欢迎来到
+					<b><a href="">XXX商城</a></b>&nbsp;&nbsp;
+					[<a href="">登录</a>]&nbsp;&nbsp;
+					[<a href="">注册</a>]
+				</div>
+				<ul class="quick-menu">
+					<li class="user-center">
+						<div class="menu">
+							<a href="index.html">我的商城</a>
+							<i class="arrow"></i> <!-- 箭头 -->
+						</div>
+						<span class="hline"></span> <!-- 分割线 -->
+						<div class="menu-bd menu-bdp">
+							<ul>
+								<li><a href="">已买到的商品</a></li>
+								<li><a href="">个人主页</a></li>
+								<li><a href="">我的好友</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="user-center">
+						<div class="menu">
+							<a href="">卖家中心</a>
+							<i class="arrow"></i>
+							<span class="hline"></span>
+						</div>
+						<div class="menu-bd menu-bdp">
+							<ul>
+								<li><a href="">已售出的商品</a></li>
+								<li><a href="">销售处的商品</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="user-center">
+						<div class="menu">
+							<a href="">我的订单</a>
+
+							<span class="hline"></span>
+						</div>
+					</li>
+					<li class="user-center">
+						<div class="menu">
+							<a href="">我的收藏</a>
+							<i class="arrow"></i>
+							<span class="hline"></span>
+						</div>
+						<div class="menu-bd">
+							<ul>
+								<li><a href="">收藏的商品</a></li>
+								<li><a href="">收藏的店铺</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="user-center">
+						<div class="menu">
+							<a href="">站内消息</a>
+							<span class="hline"></span>
+						</div>
+					</li>
+					<li class="user-center">
+						<div class="menu">
+							<a href="">更多链接</a>
+							<i class="arrow"></i>
+						</div>
+						<div class="menu-bd">
+							<ul>
+								<li><a href="">商家入驻</a></li>
+								<li><a href="">商家帮助</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<!------- 	<div class="head">----logo和搜索行---->
+		<div class="head">
+			<div class="logo fl">
+				<a href="index.html"><img src="images/logo.png"></a>
+			</div>
+			<div class="search fl">
+				<div class="sch-form">
+					<input type="text" class="stext">
+					<input type="button" class="sbtn" value="搜索">
+				</div>
+				<div class="sch-hint">
+					<a href="">笔记本电脑</a>
+					<a href="">女装</a>
+					<a href="">0元试用</a>
+				</div>
+			</div>
+			<div class="cart fr">
+				<div class="cartb">
+					<i class="buyicon"></i>
+					<a href="">我的购物车</a>
+				</div>
+			</div>
+		</div>
+
+		<!------- 	<div class="dtw">----商品分类和导航行---->
+		<div class="tou">
+			<div class="tous">
+				<div id="tou_ct">
+					今日上新
+				</div>
+				<div id="tou_ctd" ></div>
+			</div>
+			<div class="tous">
+				<div id="tou_ct">
+					家用电器
+				</div>
+				<div id="tou_ctd"></div>
+			</div>
+			<div class="tous">
+				<div id="tou_ct">
+					家具日用
+				</div>
+				<div id="tou_ctd"></div>
+			</div>
+			<div class="tous">
+				<div id="tou_ct">
+					3C数码
+				</div>
+				<div id="tou_ctd"></div>
+			</div>
+			<div class="tous">
+				<div id="tou_ct">
+					鞋靴箱包
+				</div>
+				<div id="tou_ctd"></div>
+			</div>
+			<div class="tousm">
+				<div id="tou_ct">
+				  更多▼
+				</div>
+				<div class="mores">
+				   <ul>
+				   	  <li>好多东西</li>
+					  <li>好多东西</li>
+					  <li>好多东西</li>
+					  <li>好多东西</li>
+					  <li>好多东西</li>
+					  <li>好多东西</li>
+				   </ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 广告图 -->
+		<div class="up">
+			<div class="left">
+				<img src="images/2341875_192149432140_2.jpg"/>
+			</div>
+		</div>
+		<!-- 小导航 -->
+		<div class="smnave">
+			<ul>
+				<li style="color: red;">全部</li>
+			    <li>显示屏</li>
+			    <li>投影配件</li>
+			</ul>	
+		</div>
+		<div class="paixu">
+			<ul>
+				<li style="color: red;">综合排序</li>
+				<li>销量</li>
+				<li>折扣</li>
+				<li>价格</li>
+			</ul>
+		</div>
+		<!-- 内容  -->
+       <div class="content"> 
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+			  <div class="miaosu">
+				  <p>红米2</p>
+				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+		   <div id="pics">
+		   	  <div id="img">
+		   	  	<img src="images/O1CN01uHinhl1oKqtIl0bKH_!!125975207.jpg">
+		   	  </div>
+		   			  <div class="miaosu">
+		   				  <p>红米2</p>
+		   				  <a href="product_details.html"><span>官网Xiaomi/小米 Redmi 7 红米7a全面屏7pro官方正品新手机小米8x</span></a>
+		   			  </div>
+		   </div>
+
+	   </div>
+		
+			<div class="footer">	
+				<ul>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li><a href=""><img src="images/brand1.jpg"></a></li>
+					<li style="border-right:none"><a href=""><img src="images/brand1.jpg"></a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</body>
+</html>

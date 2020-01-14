@@ -1,0 +1,174 @@
+.dtw{
+	background: #2D80CE;
+}
+/* 头 */
+.tou{
+	margin-top: 15px;
+	margin-left:350px ;
+	width: 700px;
+	height: 60px;
+	font-weight: 500;
+}
+.tous{
+	width: 100px;
+	height: 60px;
+	text-align:center;
+	display: inline-block;
+	margin-left: 10px;
+}
+.tousm{
+	width: 100px;
+	height: 60px;
+	text-align:center;
+	display: inline-block;
+	margin-left: 10px;
+}
+.tous #tou_ct{
+	width: 80px;
+	height: 30px;
+	border-color: #E12228 2px crimson;
+	
+	margin-left: 10px;
+}
+.tous #tou_ctd{
+	height: 5px;
+	width: 75px;
+	background-color:red;
+	margin: 5px 0 0 12px;
+	display: none;
+}
+.mores{
+	width: 80px;
+	height: 180px;
+	background: white;
+	border: #555555 1px solid;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 10px;
+	position: absolute;
+	display: none;
+	z-index:999;
+}
+.mores li{
+	height: 30px;
+}
+/* 广告图 */
+.up{
+	width:66% ;
+	height: 370px;
+	margin: 0 auto;
+}
+.left{
+	
+	height: 100%;
+	width: 100%;
+	float: left;
+}
+.left img{
+	width: 100%;
+	height: 100%;
+}
+/* 小导航 */
+.smnave{
+	width: 100%;
+	height: 50px;
+	line-height: 90px;
+	margin-top: 40px;
+	font-size: 14px;
+	font-weight: 550;
+}
+.smnave ul{
+	margin-left: 360px;
+}
+.smnave li{
+	display: inline-block;
+	width: 80px;
+}
+.paixu{
+	width: 100%;
+	height: 50px;
+	line-height: 70px;
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: 600;
+}
+.paixu ul{
+	margin-left: 370px;
+}
+.paixu li{
+	display:inline-block;
+	width: 90px;
+}
+/* 中间内容 */
+.content{
+	text-align: center;
+	width: 70%;
+	height: 1800px;
+	padding-top: 20px;	
+}
+#pics{
+	width: 290px;
+	height: 390px;
+	margin-left: 30px;
+	margin-top: 20px;
+	display: inline-block;
+	box-sizing: border-box;
+	border:2px #D8D8D8 solid;
+	
+}
+#img{
+	height: 280px;
+	width: 95%;
+	margin-left:4%;
+	padding-top: 15px;
+	
+}
+#img img{
+	width: 96%;
+	height: 100%;
+	border: #333333 1px solid;
+}
+
+.miaosu{
+	width: 98%;
+	height: 68px;
+	padding-top: 20px;
+	margin-left: 2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background-color: #D0D0D0k;
+	border-left: 1px slategray solid;
+	border-bottom: 1px slategray solid;
+	border-right: 1px slategray solid;
+	border-radius: 10px 0px 0 0;
+	text-align: left;
+}
+.miaosu p{
+	font-family: "微软雅黑";
+	font-weight: 700;
+	color: red;
+}
+.miaosu span{
+	margin-left: 10px;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+
+
+.footer{
+	height: 30px;
+	width: 100%;
+	border-top: #0063DC 1px solid;
+}
+.footer ul{
+	text-align: center;
+	display: table;
+	width: 100%;
+	height: 60px;
+	
+}
+.footer li{
+	 margin-left: 50px;
+	display: inline-block;
+}

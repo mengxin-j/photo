@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>商城-欢迎登录</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="Styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/admin-all.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/login.css" />    
+    <script type="text/javascript" src="Scripts/jquery.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.spritely-0.6.js"></script>
+    <script type="text/javascript" src="Scripts/chur.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#clouds').pan({ fps: 20, speed: 0.7, dir: 'right', depth: 10 });
+        }); 
+    </script>
+</head>
+<body>
+    <div id="clouds" class="stage"></div>
+    <div class="loginmain"></div>
+    <div class="row-fluid">
+        <h1>商城登录</h1>
+        <div class="tip"><div id="divMsg"><b>&nbsp;</b></div></div>
+        <p>
+            <label>账&nbsp;&nbsp;&nbsp;户：<input type="text" id="txtName" name="name" /></label>
+        </p>
+        <p>
+            <label>密&nbsp;&nbsp;&nbsp;码：<input type="password" id="txtPass" name="pass" /></label>
+        </p>
+        <p class="pcode">
+            <label>&nbsp;&nbsp;&nbsp;验&nbsp;&nbsp;证&nbsp;&nbsp;码：<input type="text" id="txtCode" name="code" maxlength="4" class="code"/>
+            <img id="randCode" src="RandCodeServlet" title="看不清换一张" class="imgcode"  />
+            <a id="randCode2">换一张</a></label>
+        </p>
+        <hr />
+        <input id="button1" type="button" value=" 登 录 " class="btn btn-primary btn-large login" />
+        &nbsp;&nbsp;&nbsp;<input id="button2" type="button" value=" 注 册 " class="btn btn-large" />
+    </div>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+	//清除ajax缓存
+	$.ajaxSetup({cache:false});
+	
+	//刷新验证码
+	$("#randCode,#randCode2").click(function(e) {
+		$("#randCode").attr("src","RandCodeServlet?t="+new Date().getTime());
+	});
+	 
+	//登陆请求	
+	$("#button1").click(function() {
+		var name = $("#txtName").val();
+		var pass = $("#txtPass").val();
+		var code = $("#txtCode").val();
+		if (name!="" && pass!="" && code!="") {
+		$.ajax({
+			url:"LoginServlet?action=Login&t="+new Date().getTime(),
+			type:"post",
+			data:"name="+name+"&pass="+pass+"&code="+code,
+			success:function(responseText){
+				$("#divMsg").addClass("tipMsg");
+				if (responseText=="LoginSuc") {
+					$("#divMsg").html("登陆成功！");
+					window.location="kefu.jsp";
+				}else if(responseText=="LoginFalse"){
+					$("#divMsg").html("登陆失败，请重新输入账号密码！");
+				}else if(responseText=="CodeFalse"){
+					$("#divMsg").html("验证码错误，请重新输入验证码！");
+				}else if(responseText=="AlreadyLogin"){
+					$("#divMsg").html("不能重复登陆！");
+				}else if(responseText=="KefuLogin"){
+					$("#divMsg").html("客服登陆");
+					window.location="kefuCenter.jsp";
+				}
+			},
+			error:function(xhr){
+				$("#divMsg").addClass("tipMsg");
+				$("#divMsg").html("网络出错了："+xhr.status);
+			}
+		});
+		
+		}else{
+			$("#divMsg").addClass("tipMsg");
+			if (name=="") {
+				$("#divMsg").html("账号不能为空！");
+				$("#txtName").focus();
+				return false;
+			}
+			if (pass=="") {
+				$("#divMsg").html("密码不能为空！");
+				$("#txtPass").focus();
+				return false;
+			}
+			if (code=="") {
+				$("#divMsg").html("验证码不能为空！");
+				$("#txtCode").focus();
+				return false;
+			}
+		}
+	});
+	
+	//注册
+	$("#button2").click(function(){
+		window.location="register.html";
+	});
+});
+</script>
+</body>
+</html>

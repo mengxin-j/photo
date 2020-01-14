@@ -1,0 +1,86 @@
+body
+{
+	font-size:11px
+}
+h3
+{
+	margin:0px
+}
+.divShow
+{
+	border:solid 1px #ccc;
+	background-color:#fff;
+	height:480px;
+	padding:5px;
+	font-size:14px;
+	/* overflow-y:scroll; */
+	overflow-x: none; overflow-y: auto; resize:vertical; 
+}
+#divMain
+{	
+	background-color: #E0ECFC;
+	/*background-color:#2e2f3d;*/
+    border: 1px #C1DBFC double;
+} 
+#divMain .divtop
+{
+	padding:10px
+}
+#divMain .divtop .divL
+{
+	float:left;
+	width:78%
+}
+#divMain .divtop .divR
+{
+	float:right;
+	width:20%
+} 
+#divMain .divBot
+{
+	clear:both;
+	padding:10px
+}
+#divMain .divBot .pb
+{
+	padding-bottom:3px
+}
+#divMain .divBot .pl
+{
+	padding-left:12px
+}
+#divMain .divBot .pt
+{
+	padding-top:3px;
+	color:#555
+}
+/*Õì²ìÇëÇó×´Ì¬ÑùÊ½*/
+.clsTip
+{
+	position:absolute;
+    width:160px;
+    text-align:center;
+    font-size:13px;
+    border:solid 1px #cc3300;
+    margin-top:5px;
+    padding:2px;
+    margin-bottom:5px;
+    background-color:#ffe0a3;
+    display:block;
+ }
+.txt
+{
+	border:#666 1px solid;
+    padding:2px;
+    margin-right:3px
+ }
+.btn 
+{
+	border:#666 1px solid;
+	background-color:#f7f7f7;
+	padding:2px;
+	width:135px;
+	height:40px; 
+	font-size:16px;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff, EndColorStr=#ECE9D8)
+}

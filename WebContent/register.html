@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>用户注册</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/chat.css" />
+<script type="text/javascript" src="Scripts/jquery.js"></script>
+<script type="text/javascript" src="Scripts/jquery.validate.js"></script>
+<script type="text/javascript" src="Scripts/jquery.validate.messages_cn.js"></script>
+<script type="text/javascript" src="Scripts/jquery.form.js"></script>
+<style type="text/css">
+       body{font-size:13px}
+       span{color:#C00; padding:0 6px;}
+       p{font-size:14px; margin-left:100px;}
+       .inputsytle{background-color:#eee;height:24px;width:200px;border:1px solid  #ccc;}
+       .btn {color:#fff;font-size:14px;background:#e2231a;padding:2px;width:100px;height:30px;text-align:center;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="regBox" style="top:-50px;">
+    <div class="chat03">
+	    <div class="chat03_title">
+	        <label class="chat03_title_t">欢迎注册</label>
+	    </div>
+	    <form id="frmV" method="post" action="MemberServlet?action=Register">
+	    <div class="chat03_content" >
+		     <div style="line-height:40px" >
+		     <p >&nbsp;&nbsp;
+				<font color="red"><span id="result"></span></font>
+		     </p>		     
+		     <p>&nbsp;&nbsp;账户：
+		     	 <input id="loginName" name="loginName" type="text" class="inputsytle" />
+		         <font color="red">*</font> <span></span>
+		     </p>
+		     <p >&nbsp;&nbsp;密码：
+		         <input id="password" type="password" name="password" type="text" class="inputsytle"/> 
+		         <font color="red">*</font> <span></span>
+		     </p>			    
+		     <p >&nbsp;&nbsp;确认：
+		         <input id="password2" type="password" name="password2" type="text" class="inputsytle"/> 
+		         <font color="red">*</font> <span></span>
+		     </p>
+		     <p >&nbsp;&nbsp;性别：
+		         <input type="radio" id="gender_male"  name="sex" value="0" checked="checked" />男 
+		         <input type="radio" id="gender_female" name="sex" value="1" />女    
+		         <span></span>
+		     </p>
+		     <p >&nbsp;&nbsp;昵称：
+		     	 <input id="memberName" name="memberName" type="text" class="inputsytle"/>
+		         <font color="red">*</font> <span></span>
+		     </p>		     		     
+		     <p >&nbsp;&nbsp;邮件：
+		     	 <input id="email" name="email" type="text" class="inputsytle"/>
+		          <font color="red">*</font> <span></span>
+		     </p>			     
+		     <p >&nbsp;&nbsp;QQ：
+		         <input id="qq" name="qq" type="text" class="inputsytle"/>
+		         <span></span>
+		     </p>		     
+		     <p style="font-size:14px;">&nbsp;&nbsp;
+		     	<input id="sbtUser" type="submit" class="btn" value="提&nbsp;&nbsp;交" />
+		     	<input id="resetUser" type="reset" class="btn" value="重&nbsp;&nbsp;填" />
+		     	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		     	<span style="color: #999;font-size: 16px;">已有账号？<a href='login.html' style="color: #e22;text-decoration:none;font-size: 16px;">请登录</a></span>
+		     </p>
+		     </div>     
+	     </div>
+	     </form>
+	</div>
+</div>
+</body>
+</html>
+<script>
+
+//检查注册账号的唯一性
+function isValidAccount(){
+	$.ajax({
+		type:"post",
+		url:"LoginServlet?action=IsAlreadyReg&t="+new Date().getTime(),
+		data:"loginName="+$("#loginName").val(),
+		success:function (responseText){
+			if(responseText=="AlreadyReg") {
+				$("#result").html("该账号已注册");
+				return false;
+			}
+			$("#result").html("");
+		}
+	});
+}
+
+//引入jquery.validate.js，执行注册表单规则检查
+function checkRegister(){
+	$("#frmV").validate({
+		//验证规则
+		rules:{
+			loginName:{required:true,minlength:6,maxlength:16},
+			password:{required:true,minlength:6,maxlength:16},
+			password2:{required:true,minlength:6,maxlength:16,equalTo:"#password"},
+			memberName:{required:true,minlength:3,maxlength:16},
+			email:{required:true,email:true},
+			qq:{digits:true,rangelength:[5,12]}
+		},
+		//错误提示的位置
+		errorPlacement:function(error,element){
+			error.appendTo(element.siblings("span"));
+		},
+		//检查通过提交表单
+		submitHandler:function(form){
+			isValidAccount();
+			submitRegister();
+		}
+	});
+}
+
+//引入jquery.form.js，以Ajax的方式提交注册表单
+function submitRegister(){
+	$("#frmV").ajaxSubmit({
+		type:"post",
+		url:"LoginServlet?action=Register",
+		success:function(responseText){
+			if (responseText=="RegSuc") {
+				$("#result").html($("#loginName").val()+",注册成功");
+				$("#frmV").resetForm();
+			}else if (responseText=="RegFail"){
+				$("#result").html($("#loginName").val()+",注册失败，请检查注册信息！");
+			}
+		}
+	});
+}
+
+$(document).ready(function(){
+   //执行检查账号唯一性
+   isValidAccount();
+   //执行注册表单规则检查
+   checkRegister();
+  
+});
+</script>

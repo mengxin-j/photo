@@ -1,0 +1,164 @@
+.product_meg{
+	width: 70%;
+	height: 400px;
+	margin: 0 auto;
+}
+.product_meg img{
+	float: left;
+}
+.product_name{
+	clear: both;
+	display: inline-block;
+	margin-left: 50px;
+}
+.product_meg p{
+	font-size: 24px;
+	font-weight: 800;
+	margin-top: 10px;
+}
+.price4{
+	font-family: "微软雅黑";
+	color: darkgrey;
+}
+.price{
+	font-size: 20px;
+	color: darkgray;
+	text-decoration: line-through;
+}
+.price2{
+	font-weight: 900;
+	font-size: 26px;
+	color: red;
+}
+.price3{
+	color: red;
+	font-weight: 900;
+	font-size: 36px;
+}
+.discount{
+	line-height: 25px;
+}
+.discount span{
+	float: left;
+	color: darkgray;
+}
+.discount ul{
+	margin-left:25px;
+	display: inline-block;
+}
+.discount_li{
+	display: inline-block;
+	width: 85px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: red;
+	border: 1px solid red;
+}
+.discount_li:hover{
+	background-color: red;
+	color: white;
+	cursor: pointer;
+}
+.number span{
+	color: darkgray;
+	margin-right: 37px;
+}
+.number input:first-of-type{
+	width: 50px;
+}
+.number input[type=button]{
+	width: 35px;
+	height: 20px;
+}
+.size span{
+	color: darkgray;
+}
+.size ul{
+	display: inline-block;
+	margin-left: 25px;
+}
+.size_li{
+	display: inline-block;
+	padding: 0 5px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	border: 1px solid black;
+}
+.size_li:hover{
+	border-color: red;
+	cursor: pointer;
+}
+.size_other_li{
+	border-color: red;
+}
+.address_detail{
+	display: inline-block;
+	margin-left: 25px;
+	border: 1px solid darkgray;
+	padding: 5px 10px;
+}
+.address_detail_meg{
+	width: 500px;
+	border: 1px solid black;
+	display: none;
+	z-index: 9999;
+	background-color: white;
+	position: absolute;
+}
+.address_detail_meg ul{
+	list-style: none;
+	margin-left: 5%;
+}
+.address_detail_meg_li{
+	width: 75px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	margin-right:15px ;
+}
+.address_detail_meg_li:hover{
+	background-color: darkgray;
+}
+.add{
+	clear: both;
+	margin-left: 45%;
+}
+.add button{
+	font-size: 22px;
+	color: white;
+	background-color: red;
+	padding: 5px 15px;
+	border-radius: 15px;
+	margin-right: 25px;
+}
+.other_product{
+	width: 85%;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 3%;
+}
+.right_product{
+	width: 200px;
+	float: left;
+	text-align: justify;
+	margin: 0 60px;
+}
+.right_product p{
+	display: inline-block;
+	font-size: 12px;
+	height: 18px;
+	padding: 0 3px;
+	margin: 0 5px;
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+}
+.right_product span{
+	
+}
+.discount_youhui{
+	background-color: red;
+	color: white;
+}
